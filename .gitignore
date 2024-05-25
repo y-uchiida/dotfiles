@@ -8,6 +8,9 @@
 !.bash_profile
 !.vimrc
 
+!/.bin/
+!/.bin/**
+
 !/README.md
 !/LICENSE
 !.gitignore
