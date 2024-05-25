@@ -1,0 +1,14 @@
+### all ignore ###
+/*
+/.**
+
+### not ignore ###
+!.bashrc
+!.profile
+!.bash_profile
+!.vimrc
+
+!/README.md
+!/LICENSE
+!.gitignore
+!.gitkeep
