@@ -132,3 +132,16 @@ eval "$(pyenv init -)"
 
 #settings for poetry
 export PATH="/home/y-uchiida/.local/bin:$PATH"
+
+# settings for devcontainer ssh agent
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent`
+fi
+# add github ssh key to ssh-agent
+eval `ssh-add $HOME/.ssh/GitHub/GitHub_rsa-noPassphrase > /dev/null 2>&1`
