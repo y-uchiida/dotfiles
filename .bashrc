@@ -128,6 +128,9 @@ alias wezterm='flatpak run org.wezfurlong.wezterm'
 # settings for poetry
 export PATH="/home/y-uchiida/.local/bin:$PATH"
 
+# add Rye shims to PATH
+export PATH="$HOME/.rye/shims:$PATH"
+
 # settings for devcontainer ssh agent
 if [ -z "$SSH_AUTH_SOCK" ]; then
    # Check for a currently running instance of the agent
