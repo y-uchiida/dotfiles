@@ -145,3 +145,10 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 # add github ssh key to ssh-agent
 eval `ssh-add $HOME/.ssh/GitHub/GitHub_rsa-noPassphrase > /dev/null 2>&1`
+
+# settings for vagrant-virtualbox
+# - Vagrant and Windows Subsystem for Linux (https://www.vagrantup.com/docs/other/wsl)
+# - How to run Vagrant + VirtualBox on WSL 2 (2021) (https://blog.thenets.org/how-to-run-vagrant-on-wsl-2/)
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
