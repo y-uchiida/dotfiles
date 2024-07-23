@@ -125,12 +125,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # settings for wezTerm in flatpak
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 
-# settings for pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#settings for poetry
+# settings for poetry
 export PATH="/home/y-uchiida/.local/bin:$PATH"
 
 # settings for devcontainer ssh agent
