@@ -144,6 +144,9 @@ fi
 # add github ssh key to ssh-agent
 eval `ssh-add $HOME/.ssh/GitHub/GitHub_rsa-noPassphrase > /dev/null 2>&1`
 
+#settings for direnv
+eval "$(direnv hook bash)"
+
 # settings for vagrant-virtualbox
 # - Vagrant and Windows Subsystem for Linux (https://www.vagrantup.com/docs/other/wsl)
 # - How to run Vagrant + VirtualBox on WSL 2 (2021) (https://blog.thenets.org/how-to-run-vagrant-on-wsl-2/)
