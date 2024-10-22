@@ -30,3 +30,10 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # import Rye environment
 . "$HOME/.rye/env"
+
+# settings for ssh-agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/GitHub/GitHub_rsa-noPassphrase
+  ssh-add -L
+fi
