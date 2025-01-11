@@ -158,3 +158,7 @@ export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 if [ -x "$(command -v starship)" ]; then
     eval "$(starship init bash)"
 fi
+
+# system language to Japanese, terminal language to English
+export LANG=ja_JP.UTF-8
+export LC_MESSAGES=en_US.UTF-8
