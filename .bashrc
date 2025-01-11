@@ -153,3 +153,8 @@ eval "$(direnv hook bash)"
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
+# settings for starship
+if [ -x "$(command -v starship)" ]; then
+    eval "$(starship init bash)"
+fi
